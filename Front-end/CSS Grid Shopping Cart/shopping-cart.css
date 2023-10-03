@@ -1,0 +1,104 @@
+html, body{
+    margin: 0;
+    padding: 5%;
+    font-family: "Heebo", sans-serif;
+    font-weight: 300;
+    color: white;
+    background: rgb(50, 55, 67);
+}
+
+.cart-grid-container{
+    display: grid;
+    /* grid-template-columns: repeat(3,1fr);  */
+    gap: 15px;
+    grid-template-areas: 'header header header'
+                         'order order order'
+                         'content content total'
+                         'content content checkout'
+                         'content content need-help'
+                         'footer footer footer' ;
+}
+
+.grid-item{
+    padding: 10px;
+    border-radius: 5px;                     
+}
+
+.header{
+    grid-area: header;
+    text-align: center;
+    background-color: rgb(46, 50, 62);
+    color: rgb(76, 83, 103);
+    letter-spacing: 5px;
+}
+
+.offer{
+    grid-area: offer;
+    color: #3c3d29;
+    background: #777a52;
+    font-weight: 800;
+    text-align: center;
+}
+.content{
+    grid-area: content;
+    background: #414758;
+    border: 1px solid #414758 ;
+}
+.total{
+    grid-area: total;
+    height: 40px;
+    display: flex;
+    justify-content: space-between;
+    background: #5c527a;
+    border: 1px solid #5c527a;
+}
+.checkout{
+    grid-area: checkout;
+    height: 40px;
+    background-color: #2b705f;
+    border: 1px solid #2b705f;
+    /* display: flex;
+    justify-content: flex-end; */
+}
+.need-help{
+    grid-area: need-help;
+    height: 40px;
+    background: rgb(118, 84, 69);
+    border: 1px solid rgb(118, 84, 69);
+}
+.footer{
+    grid-area: footer;
+    text-align: center;
+    background-color: rgb(46, 50, 62);
+    color: rgb(76, 83, 103);
+    letter-spacing: 5px;
+}
+
+
+/* content part */
+.items{
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 0 10px 0;
+    border-bottom: 1px solid rgb(101, 118, 118);
+}
+
+/* checkout part */
+
+.checkout > button{
+    width: 40%;
+    padding: 5px;
+    float: right;
+    background-color: #26d9ac;
+    border: 1px solid #26d9ac;
+    border-radius: 5px;
+}
+
+
+/* small screen */
+@media screen and (max-width:700px) {
+    .cart-grid-container{
+        display: flex;
+        flex-direction: column;
+    }
+}
