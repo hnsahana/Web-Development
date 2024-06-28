@@ -1,0 +1,74 @@
+html, body{
+    margin: 0;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: 20px;
+}
+
+/* whole container */
+.container{
+    width: 80%;
+    margin: auto;
+}
+
+/* Title section */
+.title{
+    text-align: center;
+}
+
+/* Add Section */
+#input-el{
+    width: 80%;
+    height: 30px;
+}
+
+
+#add-btn{
+    height: 38px;
+}
+
+
+/* Content section */
+
+ul{
+    padding: 0;
+}
+.item{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    text-decoration: none;
+}
+
+.item .task-content{
+    width: 80%;
+}
+
+input[type=checkbox]{
+    accent-color: blue;
+    width: 20px;
+    height: 20px;
+}
+
+.delete-btn{
+    height: 30px;
+}
+
+.completed{
+    text-decoration: line-through;
+}
+
+/* For responsive layout */
+
+@media screen and (min-width: 600px){
+    .container{
+        width: 60%;
+    }
+}
+
+@media screen and (min-width: 1000px){
+    .container{
+        width: 40%;
+    }
+}
+
+
